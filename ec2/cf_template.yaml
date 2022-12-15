@@ -26,6 +26,6 @@ Resources:
         - Ref: SecurityGroup
       UserData:
         'Fn::Base64': |
-          wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-          chmod +x Miniconda3-latest-Linux-x86_64.sh
-          ./Miniconda3-latest-Linux-x86_64.sh
+          #!/bin/bash
+          git clone https://github.com/marshmellow77/whisper-demo-sagemaker.git
+          bash -y whisper-demo-sagemaker/setup.sh
