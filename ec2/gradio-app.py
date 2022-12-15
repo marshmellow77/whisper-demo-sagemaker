@@ -61,4 +61,5 @@ demo = gr.Interface(
     allow_flagging="never",
 )
 
-demo.launch(server_port=8501, share=True)
+_, _, public_link = demo.launch(server_port=8501, share=True)
+print(public_link)
