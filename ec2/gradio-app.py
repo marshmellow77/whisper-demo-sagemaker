@@ -20,7 +20,7 @@ def transcribe(microphone, file_upload):
     file = open(filename, "rb")
     audio_content = file.read()
     
-    endpoint_name = "whisper-large-v2-2022-12-15-18-55-47-431"
+    endpoint_name = "whisper-large-v2"
     sagemaker_runtime = boto3.client('runtime.sagemaker', region_name="us-east-1")
     
     res = sagemaker_runtime.invoke_endpoint(

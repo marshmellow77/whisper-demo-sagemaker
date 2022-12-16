@@ -7,7 +7,7 @@ Resources:
     Properties:
       GroupName: whisper-demo-sg
       GroupDescription: Security group for whisper-demo EC2 instance
-      SecurityGroupIngress:
+      SecurityGroupIngress:ß
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
@@ -22,10 +22,14 @@ Resources:
     Properties:
       InstanceType: t3.medium
       ImageId: ami-0574da719dca65348
+      "Tags" : [
+            {"Key" : "Name", "Value" : "whisper-demo-cf"},
+        ]
       SecurityGroups:
         - Ref: SecurityGroup
       UserData:
         'Fn::Base64': |
           #!/bin/bash
+          cd /home/ubuntu
           git clone https://github.com/marshmellow77/whisper-demo-sagemaker.git
           bash whisper-demo-sagemaker/ec2/setup.sh -y
