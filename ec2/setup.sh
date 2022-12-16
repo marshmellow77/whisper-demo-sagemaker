@@ -1,6 +1,6 @@
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-chmod +x Miniconda3-latest-Linux-x86_64.sh
-./Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p ~/miniconda
+echo "PATH=$PATH:$HOME/miniconda/bin" >> ~/.bashrc
 sudo apt-get update
 sudo apt install python3-pip
 pip3 install gradio

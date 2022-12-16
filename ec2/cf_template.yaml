@@ -28,4 +28,4 @@ Resources:
         'Fn::Base64': |
           #!/bin/bash
           git clone https://github.com/marshmellow77/whisper-demo-sagemaker.git
-          bash -y whisper-demo-sagemaker/ec2/setup.sh
+          bash whisper-demo-sagemaker/ec2/setup.sh -y
