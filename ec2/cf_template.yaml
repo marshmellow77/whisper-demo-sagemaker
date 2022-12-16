@@ -7,7 +7,7 @@ Resources:
     Properties:
       GroupName: whisper-demo-sg
       GroupDescription: Security group for whisper-demo EC2 instance
-      SecurityGroupIngress:ß
+      SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
