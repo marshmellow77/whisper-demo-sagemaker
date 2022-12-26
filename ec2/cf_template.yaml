@@ -33,3 +33,12 @@ Resources:
           cd /home/ubuntu
           git clone https://github.com/marshmellow77/whisper-demo-sagemaker.git
           bash whisper-demo-sagemaker/ec2/setup.sh -y
+
+  MyEIP:
+    Type: AWS::EC2::EIP
+
+  MyEIPAssociation:
+    Type: AWS::EC2::EIPAssociation
+    Properties:
+      AllocationId: !GetAtt MyEIP.AllocationId
+      InstanceId: !Ref EC2Instance
