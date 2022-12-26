@@ -8,4 +8,3 @@ pip3 install gradio
 pip3 install boto3
 pip3 install iso-639
 sudo apt install ffmpeg -y
-python3 whisper-demo-sagemaker/ec2/gradio-app.py

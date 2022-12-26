@@ -5,7 +5,7 @@ Resources:
   SecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupName: whisper-demo-sg2
+      GroupName: whisper-demo-sg3
       GroupDescription: Security group for whisper-demo EC2 instance
       SecurityGroupIngress:
         - IpProtocol: tcp
@@ -33,14 +33,3 @@ Resources:
           cd /home/ubuntu
           git clone https://github.com/marshmellow77/whisper-demo-sagemaker.git
           bash whisper-demo-sagemaker/ec2/setup.sh -y
-
-  MyEIP:
-    Type: AWS::EC2::EIP
-#    Properties:
-#      Domain: vpc
-
-  MyEIPAssociation:
-    Type: AWS::EC2::EIPAssociation
-    Properties:
-      AllocationId: !GetAtt MyEIP.AllocationId
-      InstanceId: !Ref EC2Instance
